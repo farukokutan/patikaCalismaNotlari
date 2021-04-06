@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emmet</title>
+    </head>
+
+    <body>
+
+        <h1>Emmet ile HTML yapılarını daha zılı oluşturmak.</h1>
+        <!-- 
+            etiket isimleri direk verebiliriz. 
+            + kardes öge
+            > icinde öge
+            ^ yukari çık ve öge oluştur
+            * çarp -> p*3
+            lorem(kelimesayisi) -> lorem4 -> 4 kelimelik lorem
+            . -> class
+            # -> id
+         -->
+
+
+         <!-- ÖRNEKLER -->
+         <!-- h1+p+h2+p+p+p  = h1+p+h2+p*3 -->
+         <h1></h1>
+         <p></p>
+         <h2></h2>
+         <p></p>
+         <p></p>
+         <p></p>
+
+
+         <!-- ul>li*3 -->
+         <ul>
+             <li></li>
+             <li></li>
+             <li></li>
+         </ul>
+
+         <!-- ol>li*5^p -->
+         <ol>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+         </ol>
+         <p></p>
+
+         <!-- p>lorem7 -->
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+         <!-- ul>li*3>lorem1^p*2>lorem4+h3>lorem1 -->
+         <!-- bu şekilde yanlış -->
+         <ul>
+             <li>Lorem.</li>
+             <li>Veritatis.</li>
+             <li>Nam?</li>
+             <p>
+                 Lorem ipsum dolor sit.
+                 <h3>Lorem.</h3>
+             </p>
+             <p>
+                 Dolorum veniam error illum?
+                 <h3>Odio!</h3>
+             </p>
+         </ul>
+
+         <!-- ul>li*3>lorem1^^p*2>lorem4^h3>lorem1 -->
+         <ul>
+             <li>Lorem.</li>
+             <li>Id.</li>
+             <li>Incidunt!</li>
+         </ul>
+         <p>Lorem ipsum dolor sit.</p>
+         <p>Voluptatum magni molestias dignissimos?</p>
+         <h3>Lorem.</h3>
+
+         <!-- h3.deneme -> h3 etiketine deneme isimli class vermesi -->
+         <h3 class="deneme"></h3>
+
+         <!-- h3#test -> h3 etiketine test isimli id vermesi -->
+         <h3 id="test"></h3>
+
+         <!-- h3.deneme#test>lorem1  -->
+         <h3 class="deneme" id="test">Lorem.</h3>
+
+         <!-- h3.patika.kodluyoruz -> h3 etiketine patika ve kodluyoruz classlarının tanımlanması -->
+         <h3 class="patika kodluyoruz"></h3>
+
+         <!-- ul>li.test*5 -->
+         <ul>
+             <li class="test"></li>
+             <li class="test"></li>
+             <li class="test"></li>
+             <li class="test"></li>
+             <li class="test"></li>
+         </ul>
+
+         <!-- ul>li#id1+li#id2+li#id3 -> uzun yolu -->
+         <ul>
+             <li id="id1"></li>
+             <li id="id2"></li>
+             <li id="id3"></li>
+         </ul>
+
+         <!-- ul>li#idNo$*3 -> kısa yolu -->
+         <!-- :$ ifadesi ile otomatik olarak tanımlama yapılır -->
+         <ul>
+             <li id="idNo1"></li>
+             <li id="idNo2"></li>
+             <li id="idNo3"></li>
+         </ul>
+
+         <!-- p>Lorem5 -->
+         <p>Lorem ipsum dolor sit amet.</p>
+
+        <!-- p{Emmet ile tag içine text yazma} -> bu şekilde de yazılabilir -->
+         <p>Emmet ile tag içine text yazma</p>
+
+
+
+    </body>
+</html>
