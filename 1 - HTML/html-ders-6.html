@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Görsellerle Çalışmak</title>
+    </head>
+    <body>
+        <!-- src -> url veya dosya adresinin belirtildiği yer -->
+        <!-- alt -> resimleri açıklamak için kullanılan bilgilendirme metinleri (resimler yüklenmediğin gözükür) -->
+        <!-- title -> fare imleci resmin üzerine geldiğinde belirtilen metnin gözükeceği kısımdır. -->
+        <!-- alt ve title parametreleri SEO açısından önemlidir. -->
+        <img src="https://picsum.photos/200/300" alt="Random İmage" title="Lorem Picsum">
+
+        <!-- üst dizinlerdeki dosyalar erişmek için -->
+        <img src="../../ornek.png">
+
+        <!-- width -> yatay genişlik -->
+        <!-- height -> dikey uzunluk  -->
+        <img src="https://picsum.photos/200/300" alt="" width="300">
+        <img src="https://picsum.photos/200/300" alt="" height="500">
+        <img src="https://picsum.photos/200/300" alt="" width="300" height="500">
+        <img src="https://picsum.photos/200/300" alt="" height="%100">
+
+
+        <!-- border -> resme belirtilen kalınlıkta çerçeve ekler -->
+        <img src="https://picsum.photos/200/300" alt="" border="4">
+
+        <!-- align -> left, right değerleri verilebilir, resmin pozisyonunu belirlemek için kullanılır. -->
+        <img src="https://picsum.photos/200/300" alt="" align="right">
+
+        <!-- resme link vermek -->
+        <a href="https://www.facebook.com">
+            <img src="facebook.png" alt="facebook">
+        </a>
+
+        <!-- Belirli bir alana link vermek -->
+        <img src="indir.png" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="_blank" alt="farukokutan.com" title="farukokutan.com" href="http://www.farukokutan.com" coords="5,15,107,21" shape="rect">
+        </map>
+
+        <!-- onload resim yüklendikten sonra çalışacak fonksiyonu belirler -->,
+        <!-- resim yüklenmezse fonksiyon çalışmaz -->
+        <!-- <img src="https://picsum.photos/200/300" onload="resimYuklendi()" />
+
+        <script>
+            function resimYuklendi(){
+                alert("Resim yüklendi.");
+            }
+        </script> -->
+
+        <!-- ekran boyutuna göre birden fazla img içeren durumlarda kullanılır. -->
+        <!-- ekran boyutu değiştikçe farklı img'ler kullanabiliriz -->
+        <!-- örnek; ekran boyutu 800px üzerinde iken kodluyoruz logosu, 800px altındaki ekran boyutlarında patika logosu görünecek -->
+        <picture>
+            <source srcset="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" media="(min-width: 800px)">
+            
+            <img src="https://www.patika.dev/patikaLogo.png" alt="" />
+        </picture>
+    </body>
+</html>
