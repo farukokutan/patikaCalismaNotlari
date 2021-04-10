@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <!-- Internal CSS - Start (head tagi arasında) -->
+    <style>
+        h1 {
+            font-size: 45px;
+            color: chocolate;
+        }
+    </style>
+    <!-- Internal CSS - End -->
+
+    <!-- External CSS - Start -->
+    <link rel="stylesheet" href="style.css">
+    <!-- External CSS - End -->
+
+</head>
+
+<body>
+    <!-- 
+
+        Inline CSS -> etiket içerisinde verilen style kullanımıdır
+        Internal CSS -> dosya içerisinde verilir, head tag'leri içerisinde style tagi arasında kullanılır  
+        External CSS -> style.css gibi veya dış kaynaktan .css dosyasını link ile vermek 
+
+     -->
+
+
+    <!-- İnline CSS - Start -->
+    <h1 style="color:blue; font-size:55px;">CSS Deneme</h1>
+    <p style="color:teal; font-size:25px;">Lorem ipsum dolor sit amet.</p>
+    <!-- İnline CSS - End -->
+
+
+    <!-- Internal CSS - Start -->
+    <h1>Internal CSS - Dosya içerisinde head tagı arasında verilen style özelliğidir.</h1>
+    <!-- Internal CSS - End -->
+
+
+    <!-- External CSS - Start -->
+    <h1 class="external-css">External CSS</h1>
+    <!-- External CSS - End -->
+
+
+
+</body>
+
+</html>
