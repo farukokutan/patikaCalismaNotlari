@@ -1,0 +1,177 @@
+/* . ile başlayan class --- # ile başlayan id */
+
+/* 
+" * " tüm etiketlere CSS uygulanmasını sağlar
+*/
+*{  
+    color: black;
+}
+
+/* HTML tarafında iki class birlikte yazılmalıdır. Diğer durumlarda css özellikleri çalışmaz */
+.color-blue.fw-700{
+    color: blue;
+    font-weight: 700;
+}
+
+/* HTML tarafında fw-100 classı color-red classının altında yer almalıdır. */
+.color-red .fw-100{
+    color: red;
+    font-weight: 100;
+}
+
+/* h1 etiketindeki turuncu classına etki eder. */
+h1.turuncu{
+    color: orange;
+}
+
+/* h2 etiketindeki turuncu classına etki eder. */
+h2.turuncu{
+    color: orangered;
+}
+
+/* p etiketindeki kirmizi classına etki eder. */
+p#kirmizi{
+    color: red;
+}
+
+/* "div" elementi içerisindeki tüm "p" elementlerini seçer. (p elementi diret olarak div elementinin içerisinde olması gerekmez.)   */
+div p{
+    font-size: 55px;
+}
+
+/* "div" elementi içindeki tüm "p" elementlerini seçer. (p elementi diret olarak div elementinin içerisinde olmalıdır.) */
+div>p{
+    color: hotpink;
+}
+
+div>ul>li#first{
+    color:red;
+}
+
+/* "div" elementinden önceki "p" elementlerini seçer. */
+div~p{
+    font-size: 90px;
+}
+
+/* name içeren tüm elementler etkiler */
+[name]{
+    color: orchid;
+    padding: 25px;
+    margin: 25px;
+}
+
+/* classı .btn olan ve attribute (niteliği) olan butona CSS uygular  */
+.btn[disabled]{
+    color: red;
+    padding: 25px;
+}
+
+/* title="deneme" olan tüm div'lere CSS uygular. (büyük küçük harf duyarlılığı vardır)  */
+div[title="deneme"]{
+    color: peru;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+/* title içerisinde "isim" kelimesi olan divlere CSS uygular */
+div[title~="isim"]{
+    font-size: xx-large;
+}
+
+/* title içerisinde "isim" ile başlayan ve "isimasasasa" gibi birleşik kelimelerde dahil tüm isim içeren divlere CSS uygular */
+div[title^="isim"]{
+    font-size: xx-large;
+}
+
+/* "http"s ile başlayan tüm a etiketlerine CSS uygular */
+a[href^="https"]{
+    color: red;
+}
+
+/* "http" içeren tüm a etiketlerine CSS uygular */
+a[href *= "http"] {
+    color: palegreen;
+}
+
+/* class özelliği sonunda "test" içeren divlere CSS uygulanır */
+div[class$="test"] {
+    background: yellow;
+}
+
+/* "https" ile başlayan ve sonunda "com" olan a etiketlerine eriştik. */
+a[href*="https"][href$="com"] {
+    color: orange;
+}
+
+ul>li:first-child{
+    color: yellowgreen;
+}
+
+li:last-child{
+    color: mediumslateblue;
+}
+
+/* listedeki 2 ve 2'nin katlarına erişir. */
+li:nth-child(2n){
+    color:red;
+}
+
+/* listedeki tek sayıları erişir. */
+li:nth-child(2n+1){
+    color:red;
+}
+
+/* listedeki 5. elemana erişir. */
+li:nth-child(5){
+    color:peru;
+} 
+
+/* listedeki sayısal konumu tek olanlara erişir. (örn; 1,3,5,7....)  */
+li:nth-child(odd){
+    color: red;
+}
+
+/* listedeki sayısal konumu çift olanlara erişir. (örn; 2,4,6,8....)  */
+li:nth-child(even){
+    color: purple;
+}
+
+/* daha önce açılmamış linke CSS uygulamak için ":link" kullanılır. */
+a#google:link {
+    color: red;
+}
+
+/* mouse üzerine geldiğinde CSS uygulamak için ":hover" kullanılır. */
+a#google:hover {
+    font-size: xx-large;
+    color: blue;
+}
+
+/* mouse ile tıklandığı anda CSS uygulanır, mouse tıklandıktan sonra CSS etkisi kaybolur */
+a#google:active {
+    font-size: x-large;
+    color: brown;
+}
+
+/* blok seviyesinde bir etiketteki ilk harfe CSS uygular. (blok seviyesi etiketlerde çalışır) */
+p::first-letter{
+    color: crimson;
+    font-size: 65px;
+}
+
+/* blok seviyesinde bir etiketteki ilk satırına CSS uygular. (blok seviyesi etiketlerde çalışır) */
+p::first-line{
+    border: 1px solid #333;
+}
+
+/* belirtilen etiketin önüne "selam" kelimesini ekler */
+p::before{
+    content: "selam";
+    color: orange;
+}
+
+/* belirtilen etiketin sonuna "güle güle" kelimesini ekler */
+p::after{
+    content: "güle güle";
+    color: red;
+}
